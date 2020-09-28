@@ -1,11 +1,5 @@
 ## About
 
-**NO LONGER MAINTAINED**
-
-
-[![Build Status](https://travis-ci.org/martinlindhe/laravel-vue-i18n-generator.png?branch=master)](https://travis-ci.org/martinlindhe/laravel-vue-i18n-generator)
-
-
 Laravel 5 package that allows you to share your [Laravel localizations](https://laravel.com/docs/5.8/localization)
 with your [vue](http://vuejs.org/) front-end, using [vue-i18n](https://github.com/kazupon/vue-i18n) or [vuex-i18n](https://github.com/dkfbasel/vuex-i18n).
 
@@ -18,7 +12,7 @@ Configuration paths have changed in Laravel 5.7, in order for this package to fu
 ## Install the package
 
 In your project:
-```composer require martinlindhe/laravel-vue-i18n-generator --dev```
+```composer require happones/laravel-vue-i18n-generator --dev```
 
 ### For Laravel 5.4 and below:
 For older versions of the framework:
@@ -26,13 +20,13 @@ For older versions of the framework:
 Register the service provider in ```config/app.php```
 
 ```php
-MartinLindhe\VueInternationalizationGenerator\GeneratorProvider::class,
+Happones\VueInternationalizationGenerator\GeneratorProvider::class;
 ```
 
 Next, publish the package default config:
 
 ```
-php artisan vendor:publish --provider="MartinLindhe\VueInternationalizationGenerator\GeneratorProvider"
+php artisan vendor:publish --provider="Happones\VueInternationalizationGenerator\GeneratorProvider"
 ```
 
 ## Using vue-i18n

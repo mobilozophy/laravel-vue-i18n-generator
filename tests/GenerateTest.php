@@ -1,13 +1,19 @@
 <?php
 
-use MartinLindhe\VueInternationalizationGenerator\Generator;
+use Happones\VueInternationalizationGenerator\Generator;
 
-class GenerateTest extends \PHPUnit_Framework_TestCase
+class GenerateTest extends \PHPUnit\Framework\TestCase
 {
-    private function generateLocaleFilesFrom(array $arr)
+    /**
+     *
+     *
+     * @param array $arr
+     * @return string
+     */
+    private function generateLocaleFilesFrom(array $arr): string
     {
         $root = sys_get_temp_dir() . '/' . sha1(microtime(true) . mt_rand());
-        
+
         if (!is_dir($root)) {
             mkdir($root, 0777, true);
         }
@@ -27,7 +33,11 @@ class GenerateTest extends \PHPUnit_Framework_TestCase
         return $root;
     }
 
-    private function destroyLocaleFilesFrom(array $arr, $root)
+    /**
+     * @param array $arr
+     * @param $root
+     */
+    private function destroyLocaleFilesFrom(array $arr, $root): void
     {
         foreach ($arr as $key => $val) {
 
@@ -49,7 +59,10 @@ class GenerateTest extends \PHPUnit_Framework_TestCase
         }
     }
 
-    function testBasic()
+    /**
+     * @throws Exception
+     */
+    function testBasic(): void
     {
         $arr = [
             'en' => [
@@ -208,7 +221,10 @@ class GenerateTest extends \PHPUnit_Framework_TestCase
         $this->destroyLocaleFilesFrom($arr, $root);
     }
 
-    function testInvalidFormat()
+    /**
+     * @throws Exception
+     */
+    function testInvalidFormat(): void
     {
         $format = 'es5';
         $arr = [];
@@ -221,6 +237,7 @@ class GenerateTest extends \PHPUnit_Framework_TestCase
 
         }
         $this->destroyLocaleFilesFrom($arr, $root);
+        $this->assertTrue(true);
     }
 
     function testBasicWithTranslationString()
