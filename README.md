@@ -77,6 +77,31 @@ const app = new Vue({
 }
 ```
 
+### Laravel Inertia
+
+```javascript
+import { createI18n } from 'vue-i18n';
+
+const i18n = createI18n({
+    locale: 'ja', // set locale
+    fallbackLocale: 'en', // set fallback locale
+    messages, // set locale messages
+    // If you need to specify other options, you can set other options
+    // ...
+})
+
+createInertiaApp({
+    setup({ el, app, props, plugin }) {
+        const VueApp = createApp({ render: () => h(app, props) });
+        VueApp.use(plugin)
+            .use(i18n)
+            .mixin({ methods: { route } })
+            .mount(el);
+    },
+});
+```
+
+
 For older vue-i18n (5.x), the initialization looks something like:
 ```js
 import Vue from 'vue';
