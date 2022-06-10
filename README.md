@@ -4,21 +4,15 @@
 [![Build Status](https://travis-ci.org/happones/laravel-vue-i18n-generator.png?branch=master)](https://travis-ci.org/happones/laravel-vue-i18n-generator)
 [![Total Downloads](https://img.shields.io/packagist/dt/happones/laravel-vue-i18n-generator.svg?style=flat-square)](https://packagist.org/packages/happones/laravel-vue-i18n-generator)
 
-Laravel 5 package that allows you to share your [Laravel localizations](https://laravel.com/docs/5.8/localization)
+Laravel 6 package that allows you to share your [Laravel localizations](https://laravel.com/docs/5.8/localization)
 with your [vue](http://vuejs.org/) front-end, using [vue-i18n](https://github.com/kazupon/vue-i18n) or [vuex-i18n](https://github.com/dkfbasel/vuex-i18n).
-
-
-## Laravel 5.7 notice!
-
-Configuration paths have changed in Laravel 5.7, in order for this package to function properly you need to configure correct paths for jsPath and jsFile in your `config\vue-i18n-generator.php`.
-
 
 ## Install the package
 
 In your project:
 ```composer require happones/laravel-vue-i18n-generator --dev```
 
-### For Laravel 5.4 and below:
+### For Laravel 6.0 and below:
 For older versions of the framework:
 
 Register the service provider in ```config/app.php```
