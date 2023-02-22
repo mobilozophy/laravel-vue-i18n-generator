@@ -9,8 +9,15 @@ with your [vue](http://vuejs.org/) front-end, using [vue-i18n](https://github.co
 
 ## Install the package
 
+### For Laravel 10.x:
+
 In your project:
 ```composer require happones/laravel-vue-i18n-generator --dev```
+
+### For Laravel 9.x and above:
+
+In your project:
+```composer require happones/laravel-vue-i18n-generator:0.1.47 --dev```
 
 ### For Laravel 6.0 and below:
 For older versions of the framework:
