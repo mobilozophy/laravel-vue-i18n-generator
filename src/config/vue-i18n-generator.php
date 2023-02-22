@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'langPath' => '/resources/lang',
+    'langPath' => '/lang',
 
     /*
     |--------------------------------------------------------------------------
@@ -55,8 +55,8 @@ return [
     | Note: the path will be prepended to point to the App directory.
     |
     */
-    'jsPath' => '/resources/js/langs/',
-    'jsFile' => '/resources/js/vue-i18n-locales.generated.js',
+    'jsPath' => '/resources/js/locales/',
+    'jsFile' => '/resources/js/vue-i18n-locales.js',
 
     /*
     |--------------------------------------------------------------------------

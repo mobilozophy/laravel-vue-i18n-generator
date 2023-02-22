@@ -14,6 +14,8 @@ with your [vue](http://vuejs.org/) front-end, using [vue-i18n](https://github.co
 In your project:
 ```composer require happones/laravel-vue-i18n-generator --dev```
 
+>By default, the Laravel application skeleton does not include the lang directory. If you would like to customize Laravel's language files, you may publish them via the lang:publish Artisan command. [Read more.](https://laravel.com/docs/10.x/localization)
+
 ### For Laravel 9.x and above:
 
 In your project:
